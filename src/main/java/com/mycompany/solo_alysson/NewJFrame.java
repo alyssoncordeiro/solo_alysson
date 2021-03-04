@@ -283,14 +283,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void cadSoloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadSoloActionPerformed
         cadSolo();
-        /*DefaultTableModel dados = (DefaultTableModel) tabelaDados.getModel();
-        Object[] dadosSolo  = {cxSolo.getText(), cxFosforo.getText(),
-            cxPotassio.getText(), cxCalcio.getText(), cxMagnesio.getText(),
-            cxEnxofre.getText(), cxAluminio.getText(), cxHal.getText()};
-        dados.addRow(dadosSolo);*/
     }//GEN-LAST:event_cadSoloActionPerformed
 
-    public void cadSolo() {
+    public void cadSolo() { //realiza o cadastro dos dados do solo
         solo = new Solo();
 
         try {
@@ -317,9 +312,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 cxAluminio.setText("");
                 cxHal.setText("");
                 cxProd.requestFocus();
-                showTabSolo();/*
-                showListaPes();
-                showComboPes();*/
+                showTabSolo();
             } else {
                 JOptionPane.showMessageDialog(null, "Já existe um cadastro com este código!", "ERRO Cadastro", 0);
                 cxProd.setText("");

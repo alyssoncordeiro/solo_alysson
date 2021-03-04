@@ -11,10 +11,11 @@ package com.mycompany.solo_alysson;
  */
 public class Solo {
     int soloId, prodId;
-    double fosforo, potassio, calcio, magnesio, enxofre, aluminio, hal;
-    double sCmol, ctcCmol, vAtual;
+    double fosforo, potassio, calcio, magnesio, enxofre, aluminio, hal, m_o;
 
-    public Solo(int prodId, int soloId, double fosforo, double potassio, double calcio, double magnesio, double enxofre, double aluminio, double hal) {
+    public Solo(int prodId, int soloId, double fosforo, double potassio, 
+            double calcio, double magnesio, double enxofre, double aluminio, 
+            double hal, double m_o) {
         this.prodId = prodId;
         this.soloId = soloId;
         this.fosforo = fosforo;
@@ -24,6 +25,7 @@ public class Solo {
         this.enxofre = enxofre;
         this.aluminio = aluminio;
         this.hal = hal;
+        this.m_o = m_o;
     }
 
     public Solo() {
@@ -65,6 +67,10 @@ public class Solo {
         return hal;
     }
 
+    public double getM_o() {
+        return m_o;
+    }
+
     public void setProdId(int prodId) {
         this.prodId = prodId;
     }
@@ -101,15 +107,15 @@ public class Solo {
         this.hal = hal;
     }
 
+    public void setM_o(double m_o) {
+        this.m_o = m_o;
+    }
+
     @Override
     public String toString() {
         return "Solo{" + "soloId=" + soloId + ", fosforo=" + fosforo + 
                 ", potassio=" + potassio + ", calcio=" + calcio + ", magnesio=" 
                 + magnesio + ", enxofre=" + enxofre + ", aluminio=" + aluminio + 
                 ", hal=" + hal + '}';
-    }
-
-    public void calcular(){
-
     }
 }
