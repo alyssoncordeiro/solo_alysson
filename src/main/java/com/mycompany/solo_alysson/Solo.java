@@ -10,11 +10,12 @@ package com.mycompany.solo_alysson;
  * @author Alysson Cordeiro
  */
 public class Solo {
-    int soloId;
+    int soloId, prodId;
     double fosforo, potassio, calcio, magnesio, enxofre, aluminio, hal;
     double sCmol, ctcCmol, vAtual;
 
-    public Solo(int soloId, double fosforo, double potassio, double calcio, double magnesio, double enxofre, double aluminio, double hal) {
+    public Solo(int prodId, int soloId, double fosforo, double potassio, double calcio, double magnesio, double enxofre, double aluminio, double hal) {
+        this.prodId = prodId;
         this.soloId = soloId;
         this.fosforo = fosforo;
         this.potassio = potassio;
@@ -26,6 +27,10 @@ public class Solo {
     }
 
     public Solo() {
+    }
+
+    public int getProdId() {
+        return prodId;
     }
 
     public int getSoloId() {
@@ -58,6 +63,10 @@ public class Solo {
 
     public double getHal() {
         return hal;
+    }
+
+    public void setProdId(int prodId) {
+        this.prodId = prodId;
     }
 
     public void setSoloId(int soloId) {

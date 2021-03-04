@@ -36,106 +36,106 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="208" max="32767" attributes="0"/>
+              <Component id="txtCadSolo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="182" max="-2" attributes="0"/>
+          </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jScrollPane1" alignment="0" min="-2" pref="438" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtProdCod" min="-2" max="-2" attributes="0"/>
                           <Component id="txtHal" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtAluminio" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtEnxofre" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtMagnesio" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtCalcio" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtSolo" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtFosforo" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtPotassio" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="calcio" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
-                          <Component id="magnesio" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
-                          <Component id="enxofre" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
-                          <Component id="aluminio" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
-                          <Component id="fosforo" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
-                          <Component id="soloTipo" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
-                          <Component id="potassio" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="hal" alignment="0" pref="101" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton2" min="-2" pref="105" max="-2" attributes="0"/>
-                          </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="cxSolo" alignment="0" max="32767" attributes="0"/>
+                          <Component id="cxFosforo" alignment="0" max="32767" attributes="0"/>
+                          <Component id="cxCalcio" alignment="0" pref="101" max="32767" attributes="0"/>
+                          <Component id="cxMagnesio" alignment="0" pref="101" max="32767" attributes="0"/>
+                          <Component id="cxEnxofre" alignment="0" pref="101" max="32767" attributes="0"/>
+                          <Component id="cxPotassio" alignment="0" pref="101" max="32767" attributes="0"/>
+                          <Component id="cxAluminio" alignment="0" pref="101" max="32767" attributes="0"/>
+                          <Component id="cadSolo" alignment="0" pref="101" max="32767" attributes="0"/>
+                          <Component id="cxHal" alignment="0" max="32767" attributes="0"/>
+                          <Component id="cxProd" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jScrollPane1" min="-2" pref="438" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="89" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="btLimpar" min="-2" pref="105" max="-2" attributes="0"/>
                   </Group>
               </Group>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="txtCadSolo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="182" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="txtCadSolo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtProdCod" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cxProd" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="soloTipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtSolo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cxSolo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtFosforo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fosforo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cxFosforo" alignment="3" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtPotassio" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="potassio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cxPotassio" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtCalcio" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="calcio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cxCalcio" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtMagnesio" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="magnesio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cxMagnesio" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtEnxofre" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="enxofre" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cxEnxofre" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtAluminio" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="aluminio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cxAluminio" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtHal" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="hal" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cxHal" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cadSolo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btLimpar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="89" max="-2" attributes="0"/>
-              <EmptySpace pref="160" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -146,55 +146,55 @@
         <Property name="text" type="java.lang.String" value="H + AL:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="fosforo">
+    <Component class="javax.swing.JTextField" name="cxFosforo">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fosforoActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cxFosforoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="soloTipo">
+    <Component class="javax.swing.JTextField" name="cxSolo">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="soloTipoActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cxSoloActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="enxofre">
+    <Component class="javax.swing.JTextField" name="cxEnxofre">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="enxofreActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cxEnxofreActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="magnesio">
+    <Component class="javax.swing.JTextField" name="cxMagnesio">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="magnesioActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cxMagnesioActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="aluminio">
+    <Component class="javax.swing.JTextField" name="cxAluminio">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aluminioActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cxAluminioActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="potassio">
+    <Component class="javax.swing.JTextField" name="cxPotassio">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="potassioActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cxPotassioActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="hal">
+    <Component class="javax.swing.JTextField" name="cxHal">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="halActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cxHalActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="calcio">
+    <Component class="javax.swing.JTextField" name="cxCalcio">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calcioActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cxCalcioActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="cadSolo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cadastrar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadSoloActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="txtSolo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Tipo de Solo:"/>
       </Properties>
@@ -234,7 +234,8 @@
         <Component class="javax.swing.JTable" name="tabelaDados">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="7" rowCount="0">
+              <Table columnCount="8" rowCount="0">
+                <Column editable="true" title="ID_Prod" type="java.lang.Object"/>
                 <Column editable="true" title="F&#xf3;sforo" type="java.lang.Object"/>
                 <Column editable="true" title="Pot&#xe1;ssio" type="java.lang.Object"/>
                 <Column editable="true" title="C&#xe1;lcio" type="java.lang.Object"/>
@@ -246,6 +247,11 @@
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
@@ -303,12 +309,22 @@
         <Property name="text" type="java.lang.String" value="Cadastro de Solo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="btLimpar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Limpar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btLimparActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="txtProdCod">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="C&#xf3;digo Produtor:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="cxProd">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cxProdActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
