@@ -12,10 +12,10 @@ package com.mycompany.solo_alysson;
 public class Solo {
 
     String soloTipo;
-    double fosforo, potassio, calcio, magnesio, enxofre, aluminio, hal, m_o;
+    double fosforo, potassio, calcio, magnesio, enxofre, aluminio, aluminioHidrogenio, m_o;
     double sCmol, ctcCmol, vAtual, carbono, m_oPer;
 
-    public Solo(String soloTipo, double fosforo, double potassio, double calcio, double magnesio, double enxofre, double aluminio, double hal, double m_o, double sCmol, double ctcCmol, double vAtual, double carbono, double m_oPer) {
+    public Solo(String soloTipo, double fosforo, double potassio, double calcio, double magnesio, double enxofre, double aluminio, double aluminioHidrogenio, double m_o, double sCmol, double ctcCmol, double vAtual, double carbono, double m_oPer) {
         this.soloTipo = soloTipo;
         this.fosforo = fosforo;
         this.potassio = potassio;
@@ -23,7 +23,7 @@ public class Solo {
         this.magnesio = magnesio;
         this.enxofre = enxofre;
         this.aluminio = aluminio;
-        this.hal = hal;
+        this.aluminioHidrogenio = aluminioHidrogenio;
         this.m_o = m_o;
         this.sCmol = sCmol;
         this.ctcCmol = ctcCmol;
@@ -63,8 +63,8 @@ public class Solo {
         return aluminio;
     }
 
-    public double getHal() {
-        return hal;
+    public double getAluminioHidrogenio() {
+        return aluminioHidrogenio;
     }
 
     public double getM_o() {
@@ -95,14 +95,14 @@ public class Solo {
         System.out.println("Valores do seu solo! \nFosforo: " + fosforo
                 + "\nPotassio: " + potassio + "\nCalcio: " + calcio
                 + "\nMagnesio: " + magnesio + "\nEnxofre: " + enxofre
-                + "\nAluminio: " + aluminio + "\nHal: " + hal
+                + "\nAluminio: " + aluminio + "\nAluminioHidrogenio: " + aluminioHidrogenio
                 + "\nMO: " + m_o + "\n");
     }
 
     //Calculos feitos em 28 linhas de código (Senhor estipulou 40)
     public void calculos() {
         sCmol = potassio + calcio + magnesio;
-        ctcCmol = hal + sCmol;
+        ctcCmol = aluminioHidrogenio + sCmol;
         vAtual = 100 * sCmol / ctcCmol;
         m_oPer = m_o / 10;
         carbono = m_oPer / 1.72 * 10;

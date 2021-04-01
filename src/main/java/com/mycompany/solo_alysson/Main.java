@@ -21,7 +21,7 @@ public class Main { //Classe destinada ao teste dos cálculos do solo!
         s1.magnesio = 1.63;
         s1.enxofre = 3.67;
         s1.aluminio = 0.0;
-        s1.hal = 5.35;
+        s1.aluminioHidrogenio = 5.35;
         s1.m_o = 30.7;
         s1.imprimir();//Imprime os valores do solo
         s1.calculos(); // efetua alguns calculos
@@ -35,7 +35,7 @@ public class Main { //Classe destinada ao teste dos cálculos do solo!
         s1.magnesio = 2.87;
         s1.enxofre = 2.31;
         s1.aluminio = 0.0;
-        s1.hal = 4.28;
+        s1.aluminioHidrogenio = 4.28;
         s1.m_o = 30.7;
         s1.imprimir();
         s1.calculos();
@@ -49,7 +49,7 @@ public class Main { //Classe destinada ao teste dos cálculos do solo!
         s1.magnesio = 3.47;
         s1.enxofre = 1.10;
         s1.aluminio = 0.0;
-        s1.hal = 5.15;
+        s1.aluminioHidrogenio = 5.15;
         s1.m_o = 30.7;
         s1.imprimir();
         s1.calculos();
