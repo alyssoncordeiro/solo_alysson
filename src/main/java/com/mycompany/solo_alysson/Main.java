@@ -4,6 +4,7 @@ public class Main { //Classe destinada ao teste dos cálculos do solo!
 
     public static void main(String args[]) {
         Solo s1 = new Solo();
+        Fosforo f1 = new Fosforo();
         System.out.println("Exemplo1");
         s1.soloTipo = "argiloso"; // Tipo de solo (argiloso e textura media)
         s1.fosforo = 8.59;
@@ -17,7 +18,13 @@ public class Main { //Classe destinada ao teste dos cálculos do solo!
         s1.imprimir();//Imprime os valores do solo
         s1.calculos(); // efetua alguns calculos
         s1.ideal();//Imprime os valores considerados ideais de cada item
-
+        f1.fosforo = 8.59;
+        f1.teor = 12;
+        f1.fonte = "Superfosfato simples";
+        f1.eficiencia = 70.0;
+        f1.calculos();
+        f1.recuperacao();
+/*
         System.out.println("Exemplo2");
         s1.soloTipo = "argiloso";
         s1.fosforo = 10.58;
@@ -44,14 +51,9 @@ public class Main { //Classe destinada ao teste dos cálculos do solo!
         s1.m_o = 30.7;
         s1.imprimir();
         s1.calculos();
-        s1.ideal();
+        s1.ideal();*/
         
-        Fosforo f1 = new Fosforo();
-        System.out.println("Exemplo1");
-        f1.teor = 12;
-        f1.fonte = "Superfosfato simples";
-        f1.calculos();
-        f1.recuperacao();
+
         
     }
 }

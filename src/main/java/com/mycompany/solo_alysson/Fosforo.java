@@ -1,14 +1,17 @@
 package com.mycompany.solo_alysson;
 
-public class Fosforo {
+public class Fosforo extends Solo {
 
     String fonte;
-    double custo, qtdAplicar, enxofre, calcio, teor, eficiencia;;
+    double custo, qtdAplicar, teor, eficiencia, necessidadeAdicionar, pentoxidoDifosforo, pentoxidoDifosforoNecessario;
 
-    public Fosforo(int teor, int eficiencia, String fonte) {
+    public Fosforo(double fosforo, int teor, int eficiencia, String fonte, double pentoxidoDifosforo, double pentoxidoDifosforoNecessario) {
+        super.fosforo = fosforo;
         this.teor = teor;
         this.eficiencia = eficiencia;
         this.fonte = fonte;
+        this.pentoxidoDifosforo = pentoxidoDifosforo;
+        this.pentoxidoDifosforoNecessario = pentoxidoDifosforoNecessario;
     }
 
     public Fosforo() {
@@ -26,8 +29,13 @@ public class Fosforo {
         return fonte;
     }
 
+    @Override
     public void calculos() {
-        qtdAplicar = 22.31 * 100 / 18;
+        teor -= super.fosforo;
+        necessidadeAdicionar = teor * 2;
+        pentoxidoDifosforo = necessidadeAdicionar * 2.29;
+        pentoxidoDifosforoNecessario = pentoxidoDifosforo * 100 / eficiencia;
+        qtdAplicar = pentoxidoDifosforoNecessario * 100 / 18;
         custo = 1260 * qtdAplicar / 1000;
     }
 
