@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.solo_alysson;
 
-/**
- *
- * @author Alysson Cordeiro
- */
 public class Fosforo {
 
     int teor, eficiencia;
@@ -33,4 +24,18 @@ public class Fosforo {
         return fonte;
     }
 
+    public void calculos() {
+
+    }
+
+    public void recuperacao() {
+        switch (fonte) {
+            case "Superfosfato simples":
+                System.out.println("Quantidade a aplicar: " + qtdAplicar + "kg/hectare\nCusto - R$/ha " + custo);
+                break;
+            default:
+                System.out.println("Fonte de Fosforo incorreta");
+                break;
+        }
+    }
 }

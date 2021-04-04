@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.solo_alysson;
 
-/**
- *
- * @author Alysson Cordeiro
- */
 public class Main { //Classe destinada ao teste dos cálculos do solo!
 
     public static void main(String args[]) {
@@ -26,7 +17,7 @@ public class Main { //Classe destinada ao teste dos cálculos do solo!
         s1.imprimir();//Imprime os valores do solo
         s1.calculos(); // efetua alguns calculos
         s1.ideal();//Imprime os valores considerados ideais de cada item
-        
+
         System.out.println("Exemplo2");
         s1.soloTipo = "argiloso";
         s1.fosforo = 10.58;
