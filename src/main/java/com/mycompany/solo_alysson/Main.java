@@ -18,10 +18,11 @@ public class Main { //Classe destinada ao teste dos cálculos do solo!
         s1.imprimir();//Imprime os valores do solo
         s1.calculos(); // efetua alguns calculos
         s1.ideal();//Imprime os valores considerados ideais de cada item
-        f1.fosforo = 8.59;
-        f1.teor = 12;
+        f1.fosforo = s1.fosforo;
+        f1.precoFonteFosforo = 1260.0; //valor do preço do Teor de Fosforo
+        f1.teor = 12; //teor desejado atingir
         f1.fonte = "Superfosfato simples";
-        f1.eficiencia = 70.0;
+        f1.eficiencia = 70.0; //eficiencia de 70% a 90%
         f1.calculos();
         f1.recuperacao();
 /*

@@ -3,15 +3,16 @@ package com.mycompany.solo_alysson;
 public class Fosforo extends Solo {
 
     String fonte;
-    double custo, qtdAplicar, teor, eficiencia, necessidadeAdicionar, pentoxidoDifosforo, pentoxidoDifosforoNecessario;
+    double custo, qtdAplicar, teor, eficiencia, necessidadeAdicionar, pentoxidoDifosforo, pentoxidoDifosforoNecessario, precoFonteFosforo;
 
-    public Fosforo(double fosforo, int teor, int eficiencia, String fonte, double pentoxidoDifosforo, double pentoxidoDifosforoNecessario) {
+    public Fosforo(double fosforo, int teor, int eficiencia, String fonte, double pentoxidoDifosforo, double pentoxidoDifosforoNecessario, double precoFonteFosforo) {
         super.fosforo = fosforo;
         this.teor = teor;
         this.eficiencia = eficiencia;
         this.fonte = fonte;
         this.pentoxidoDifosforo = pentoxidoDifosforo;
         this.pentoxidoDifosforoNecessario = pentoxidoDifosforoNecessario;
+        this.precoFonteFosforo = precoFonteFosforo;
     }
 
     public Fosforo() {
@@ -36,7 +37,7 @@ public class Fosforo extends Solo {
         pentoxidoDifosforo = necessidadeAdicionar * 2.29;
         pentoxidoDifosforoNecessario = pentoxidoDifosforo * 100 / eficiencia;
         qtdAplicar = pentoxidoDifosforoNecessario * 100 / 18;
-        custo = 1260 * qtdAplicar / 1000;
+        custo = precoFonteFosforo * qtdAplicar / 1000;
     }
 
     public void recuperacao() {
