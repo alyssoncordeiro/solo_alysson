@@ -2,9 +2,8 @@ package com.mycompany.solo_alysson;
 
 public class Fosforo {
 
-    int teor, eficiencia;
     String fonte;
-    double custo, qtdAplicar, enxofre, calcio;
+    double custo, qtdAplicar, enxofre, calcio, teor, eficiencia;;
 
     public Fosforo(int teor, int eficiencia, String fonte) {
         this.teor = teor;
@@ -12,11 +11,14 @@ public class Fosforo {
         this.fonte = fonte;
     }
 
-    public int getTeor() {
+    public Fosforo() {
+    }
+
+    public double getTeor() {
         return teor;
     }
 
-    public int getEficiencia() {
+    public double getEficiencia() {
         return eficiencia;
     }
 
@@ -25,7 +27,7 @@ public class Fosforo {
     }
 
     public void calculos() {
-
+        qtdAplicar = 22.31 * 100 / 18;
     }
 
     public void recuperacao() {

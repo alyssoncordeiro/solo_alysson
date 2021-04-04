@@ -45,6 +45,13 @@ public class Main { //Classe destinada ao teste dos cálculos do solo!
         s1.imprimir();
         s1.calculos();
         s1.ideal();
-
+        
+        Fosforo f1 = new Fosforo();
+        System.out.println("Exemplo1");
+        f1.teor = 12;
+        f1.fonte = "Superfosfato simples";
+        f1.calculos();
+        f1.recuperacao();
+        
     }
 }
