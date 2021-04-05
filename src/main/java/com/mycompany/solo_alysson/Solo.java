@@ -98,7 +98,7 @@ public class Solo {
         m_oPer = m_o / 10;
         carbono = m_oPer / 1.72 * 10;
     }
-
+    
     public void ideal() {
         switch (soloTipo) {
             case "argiloso":

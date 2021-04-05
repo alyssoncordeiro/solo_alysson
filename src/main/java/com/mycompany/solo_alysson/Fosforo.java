@@ -5,17 +5,19 @@ public class Fosforo extends Solo {
     String fonte;
     double custo, qtdAplicar, teor, eficiencia, necessidadeAdicionar, pentoxidoDifosforo, pentoxidoDifosforoNecessario, precoFonteFosforo;
 
-    public Fosforo(double fosforo, int teor, int eficiencia, String fonte, double pentoxidoDifosforo, double pentoxidoDifosforoNecessario, double precoFonteFosforo) {
-        super.fosforo = fosforo;
-        this.teor = teor;
-        this.eficiencia = eficiencia;
-        this.fonte = fonte;
-        this.pentoxidoDifosforo = pentoxidoDifosforo;
-        this.pentoxidoDifosforoNecessario = pentoxidoDifosforoNecessario;
-        this.precoFonteFosforo = precoFonteFosforo;
+    public Fosforo() {
     }
 
-    public Fosforo() {
+    public String getFonte() {
+        return fonte;
+    }
+
+    public double getCusto() {
+        return custo;
+    }
+
+    public double getQtdAplicar() {
+        return qtdAplicar;
     }
 
     public double getTeor() {
@@ -26,8 +28,20 @@ public class Fosforo extends Solo {
         return eficiencia;
     }
 
-    public String getFonte() {
-        return fonte;
+    public double getNecessidadeAdicionar() {
+        return necessidadeAdicionar;
+    }
+
+    public double getPentoxidoDifosforo() {
+        return pentoxidoDifosforo;
+    }
+
+    public double getPentoxidoDifosforoNecessario() {
+        return pentoxidoDifosforoNecessario;
+    }
+
+    public double getPrecoFonteFosforo() {
+        return precoFonteFosforo;
     }
 
     @Override
