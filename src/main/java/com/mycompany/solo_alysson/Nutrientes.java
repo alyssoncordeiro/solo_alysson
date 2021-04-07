@@ -1,12 +1,12 @@
 package com.mycompany.solo_alysson;
 
-public class Solo {
+public class Nutrientes {
 
     String soloTipo;
-    double fosforo, potassio, calcio, magnesio, enxofre, aluminio, aluminioHidrogenio, m_o;
-    double sCmol, ctcCmol, vAtual, carbono, m_oPer;
+    double fosforo, potassio, calcio, magnesio, enxofre, aluminio, aluminioHidrogenio, mo;
+    double Scmol, CTCcmol, vAtual, carbono, moPercentual;
 
-    public Solo(String soloTipo, double fosforo, double potassio, double calcio, double magnesio, double enxofre, double aluminio, double aluminioHidrogenio, double m_o, double sCmol, double ctcCmol, double vAtual, double carbono, double m_oPer) {
+    public Nutrientes(String soloTipo, double fosforo, double potassio, double calcio, double magnesio, double enxofre, double aluminio, double aluminioHidrogenio, double mo, double Scmol, double CTCcmol, double vAtual, double carbono, double moPercentual) {
         this.soloTipo = soloTipo;
         this.fosforo = fosforo;
         this.potassio = potassio;
@@ -15,15 +15,15 @@ public class Solo {
         this.enxofre = enxofre;
         this.aluminio = aluminio;
         this.aluminioHidrogenio = aluminioHidrogenio;
-        this.m_o = m_o;
-        this.sCmol = sCmol;
-        this.ctcCmol = ctcCmol;
+        this.mo = mo;
+        this.Scmol = Scmol;
+        this.CTCcmol = CTCcmol;
         this.vAtual = vAtual;
         this.carbono = carbono;
-        this.m_oPer = m_oPer;
+        this.moPercentual = moPercentual;
     }
 
-    public Solo() {
+    public Nutrientes() {
     }
 
     public String getSoloTipo() {
@@ -58,16 +58,16 @@ public class Solo {
         return aluminioHidrogenio;
     }
 
-    public double getM_o() {
-        return m_o;
+    public double getMo() {
+        return mo;
     }
 
-    public double getsCmol() {
-        return sCmol;
+    public double getScmol() {
+        return Scmol;
     }
 
-    public double getCtcCmol() {
-        return ctcCmol;
+    public double getCTCcmol() {
+        return CTCcmol;
     }
 
     public double getvAtual() {
@@ -78,8 +78,8 @@ public class Solo {
         return carbono;
     }
 
-    public double getM_oPer() {
-        return m_oPer;
+    public double getMoPercentual() {
+        return moPercentual;
     }
 
     public void imprimir() {
@@ -87,32 +87,58 @@ public class Solo {
                 + "\nPotassio: " + potassio + "\nCalcio: " + calcio
                 + "\nMagnesio: " + magnesio + "\nEnxofre: " + enxofre
                 + "\nAluminio: " + aluminio + "\nAluminioHidrogenio: " + aluminioHidrogenio
-                + "\nMO: " + m_o + "\n");
+                + "\nMO: " + mo + "\n");
     }
 
-    //Calculos feitos em 28 linhas de código (Senhor estipulou 40)
-    public void calculos() {
-        sCmol = potassio + calcio + magnesio;
-        ctcCmol = aluminioHidrogenio + sCmol;
-        vAtual = 100 * sCmol / ctcCmol;
-        m_oPer = m_o / 10;
-        carbono = m_oPer / 1.72 * 10;
+    public double calculaSCmol(double potassio, double calcio, double magnesio) {
+        return Scmol = potassio + calcio + magnesio;
     }
-    
+
+    public double calculaCTCCmol(double aluminioHidrogenio, double Scmol) {
+        return CTCcmol = aluminioHidrogenio + Scmol;
+    }
+
+    public double calculaVPercentual(double Scmol, double CTCcmol) {
+        if (Scmol > 0 && CTCcmol > 0) {
+            return vAtual = Scmol / CTCcmol * 100;
+
+        } else {
+            return 0.0;
+        }
+    }
+
+    public double calculaMOPercentual(double mo) {
+        if (mo > 0) {
+            return moPercentual = mo / 10;
+
+        } else {
+            return 0.0;
+        }
+    }
+
+    public double calculaCarbono(double moPercentual) {
+        if (moPercentual > 0) {
+            return carbono = moPercentual / 1.72 * 10;
+
+        } else {
+            return 0.0;
+        }
+    }
+
     public void ideal() {
         switch (soloTipo) {
             case "argiloso":
                 System.out.println("Valores ideais! \nFosforo: 9.0\nPotassio: 0.35"
                         + "\nCalcio: 6.0\nMagnesio: 1.5\nEnxofre: 9.0"
-                        + "\nS cmol: " + sCmol + "\nCTC cmol: " + ctcCmol
-                        + "\nV% atual: " + vAtual + "\nM.O%: " + m_oPer
+                        + "\nS cmol: " + Scmol + "\nCTC cmol: " + CTCcmol
+                        + "\nV% atual: " + vAtual + "\nM.O%: " + moPercentual
                         + "%\nCarbono: " + carbono + "\n");
                 break;
             case "Textura Media":
                 System.out.println("Valores ideais! \nFosforo: 12.0\nPotassio: 0.25"
                         + "\nCalcio: 4.0\nMagnesio: 1.0\nEnxofre: 6.0"
-                        + "\nS cmol: " + sCmol + "\nCTC cmol: " + ctcCmol
-                        + "\nV% atual: " + vAtual + "\nM.O%: " + m_oPer
+                        + "\nS cmol: " + Scmol + "\nCTC cmol: " + CTCcmol
+                        + "\nV% atual: " + vAtual + "\nM.O%: " + moPercentual
                         + "%\nCarbono: " + carbono + "\n");
                 break;
             default:
