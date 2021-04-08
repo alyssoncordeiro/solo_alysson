@@ -1,9 +1,26 @@
 package com.mycompany.solo_alysson;
 
-public class Potassio extends Solo {
+public class Potassio {
 
     String fonte;
-    double potassioDesejado, potassioExistente, custo, qtdAplicar, potassioAdicionar, cmolcEmMg, mgEmKg, oxidoPotassio, teorOxidoPotassio, eficiencia, eficiencia2, precoFontePotassio;
+    double potassioDesejado, potassioExistente, custo, qtdAplicar, potassioAdicionar, cmolcEmMg, mgEmKg, oxidoPotassio, eficiencia, eficiencia2, precoFontePotassio;
+    int teorOxidoPotassio;
+
+    public Potassio(String fonte, double potassioDesejado, double potassioExistente, double custo, double qtdAplicar, double potassioAdicionar, double cmolcEmMg, double mgEmKg, double oxidoPotassio, int teorOxidoPotassio, double eficiencia, double eficiencia2, double precoFontePotassio) {
+        this.fonte = fonte;
+        this.potassioDesejado = potassioDesejado;
+        this.potassioExistente = potassioExistente;
+        this.custo = custo;
+        this.qtdAplicar = qtdAplicar;
+        this.potassioAdicionar = potassioAdicionar;
+        this.cmolcEmMg = cmolcEmMg;
+        this.mgEmKg = mgEmKg;
+        this.oxidoPotassio = oxidoPotassio;
+        this.teorOxidoPotassio = teorOxidoPotassio;
+        this.eficiencia = eficiencia;
+        this.eficiencia2 = eficiencia2;
+        this.precoFontePotassio = precoFontePotassio;
+    }
 
     public Potassio() {
 
@@ -61,49 +78,49 @@ public class Potassio extends Solo {
         return precoFontePotassio;
     }
 
-    @Override
-    public void calculos() {
-        potassioExistente = super.potassio / super.ctcCmol * 100;
-        potassioAdicionar = super.potassio * potassioDesejado / potassioExistente - super.potassio;
-        cmolcEmMg = potassioAdicionar * 39.1 * 10;
-        mgEmKg = cmolcEmMg * 2;
-        oxidoPotassio = mgEmKg * 1.2;
-        eficiencia2 = oxidoPotassio * 100 / eficiencia;
-        qtdAplicar = eficiencia2 * 100 / teorOxidoPotassio;
-        custo = precoFontePotassio * qtdAplicar / 1000;
+    public double calculaPotassioExistente(double potassio, double CTCcmol) {
+        return potassioExistente = potassio / CTCcmol * 100;
     }
 
-    public void verificaTeorOxidoPotassio() {
-        switch (fonte) {
-            case "Cloreto de Potassio":
-                teorOxidoPotassio = 58.0;
-                break;
-            case "Sulfato de Potassio":
-                teorOxidoPotassio = 52.0;
-                break;
-            case "Sulfato de Potassio / Magnesio":
-                teorOxidoPotassio = 22;
-                break;
+    public double calculaPotassioAdicionar(double potassio, double potassioExistente, double potassioDesejado) {
+        return potassioAdicionar = potassio * potassioDesejado / potassioExistente - potassio;
+    }
+
+    public double converteCmolcEmMg(double potassioAdicionar) {
+        return cmolcEmMg = potassioAdicionar * 39.1 * 10;
+    }
+
+    public double converteMgEmKg(double cmolcEmMg) {
+        return mgEmKg = cmolcEmMg * 2;
+    }
+
+    public double convertePotassioEmOxidoPotassio(double mgEmKg) {
+        return oxidoPotassio = mgEmKg * 1.2;
+    }
+
+    public double calculaEficiênciaPotassio(double oxidoPotassio, double eficiencia) {
+        return eficiencia2 = oxidoPotassio * 100 / eficiencia;
+    }
+
+    public double calculaQtdAplicarFontePotassio(double eficiencia2, int teorOxidoPotassio) {
+        return qtdAplicar = eficiencia2 * 100 / teorOxidoPotassio;
+    }
+
+    public double calculaCustoAplicacao(double precoFontePotassio, double qtdAplicar) {
+        return custo = precoFontePotassio * qtdAplicar / 1000;
+    }
+
+    public String verificaTeorOxidoPotassio(int teorOxidoPotassio) {
+        switch (teorOxidoPotassio) {
+            case 58:
+                return "Cloreto de Potassio";
+            case 52:
+                return "Sulfato de Potassio";
+            case 22:
+                return "Sulfato de Potassio / Magnesio";
             default:
-                System.out.println("Fonte de Potassio incorreta");
-                break;
+                return "Fonte de Potassio Invalida";
         }
     }
 
-    public void recuperacao() {
-        switch (fonte) {
-            case "Cloreto de Potassio":
-                System.out.println("Quantidade de Cloreto de Potassio a aplicar: " + qtdAplicar + " kg/hectare\nCusto/hectare: R$" + custo);
-                break;
-            case "Sulfato de Potassio":
-                System.out.println("Quantidade de Sulfato de Potassio a aplicar: " + qtdAplicar + " kg/hectare\nCusto/hectare: R$" + custo);
-                break;
-            case "Sulfato de Potassio / Magnesio":
-                System.out.println("Quantidade de Sulfatdo de Potassio / Magnesio a aplicar: " + qtdAplicar + " kg/hectare\nCusto/hectare: R$" + custo);
-                break;
-            default:
-                System.out.println("Fonte de Potassio incorreta");
-                break;
-        }
-    }
 }
