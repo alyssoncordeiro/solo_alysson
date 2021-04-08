@@ -2,12 +2,28 @@ package com.mycompany.solo_alysson;
 
 public class Nutrientes {
 
-    String soloTipo;
-    double fosforo, potassio, calcio, magnesio, enxofre, aluminio, aluminioHidrogenio, mo;
-    double Scmol, CTCcmol, vAtual, carbono, moPercentual;
+    double Scmol;
+    double CTCcmol;
+    double vAtual;
+    double carbono;
+    double moPercentual;
+    double mo;
+    private double fosforo;
+    private double potassio;
+    private double calcio;
+    private double magnesio;
+    private double enxofre;
+    private double aluminio;
+    private double aluminioHidrogenio;
 
-    public Nutrientes(String soloTipo, double fosforo, double potassio, double calcio, double magnesio, double enxofre, double aluminio, double aluminioHidrogenio, double mo, double Scmol, double CTCcmol, double vAtual, double carbono, double moPercentual) {
-        this.soloTipo = soloTipo;
+    public Nutrientes(
+            double fosforo,
+            double potassio,
+            double calcio,
+            double magnesio,
+            double enxofre,
+            double aluminio,
+            double aluminioHidrogenio) {
         this.fosforo = fosforo;
         this.potassio = potassio;
         this.calcio = calcio;
@@ -15,27 +31,14 @@ public class Nutrientes {
         this.enxofre = enxofre;
         this.aluminio = aluminio;
         this.aluminioHidrogenio = aluminioHidrogenio;
-        this.mo = mo;
-        this.Scmol = Scmol;
-        this.CTCcmol = CTCcmol;
-        this.vAtual = vAtual;
-        this.carbono = carbono;
-        this.moPercentual = moPercentual;
     }
 
-    public Nutrientes() {
-    }
+    Nutrientes() {
 
-    public String getSoloTipo() {
-        return soloTipo;
     }
 
     public double getFosforo() {
         return fosforo;
-    }
-
-    public double getPotassio() {
-        return potassio;
     }
 
     public double getCalcio() {
@@ -62,32 +65,8 @@ public class Nutrientes {
         return mo;
     }
 
-    public double getScmol() {
-        return Scmol;
-    }
-
-    public double getCTCcmol() {
-        return CTCcmol;
-    }
-
-    public double getvAtual() {
-        return vAtual;
-    }
-
-    public double getCarbono() {
-        return carbono;
-    }
-
-    public double getMoPercentual() {
-        return moPercentual;
-    }
-
-    public void imprimir() {
-        System.out.println("Valores do seu solo! \nFosforo: " + fosforo
-                + "\nPotassio: " + potassio + "\nCalcio: " + calcio
-                + "\nMagnesio: " + magnesio + "\nEnxofre: " + enxofre
-                + "\nAluminio: " + aluminio + "\nAluminioHidrogenio: " + aluminioHidrogenio
-                + "\nMO: " + mo + "\n");
+    public double getPotassio() {
+        return potassio;
     }
 
     public double calculaSCmol(double potassio, double calcio, double magnesio) {
@@ -122,28 +101,6 @@ public class Nutrientes {
 
         } else {
             return 0.0;
-        }
-    }
-
-    public void ideal() {
-        switch (soloTipo) {
-            case "argiloso":
-                System.out.println("Valores ideais! \nFosforo: 9.0\nPotassio: 0.35"
-                        + "\nCalcio: 6.0\nMagnesio: 1.5\nEnxofre: 9.0"
-                        + "\nS cmol: " + Scmol + "\nCTC cmol: " + CTCcmol
-                        + "\nV% atual: " + vAtual + "\nM.O%: " + moPercentual
-                        + "%\nCarbono: " + carbono + "\n");
-                break;
-            case "Textura Media":
-                System.out.println("Valores ideais! \nFosforo: 12.0\nPotassio: 0.25"
-                        + "\nCalcio: 4.0\nMagnesio: 1.0\nEnxofre: 6.0"
-                        + "\nS cmol: " + Scmol + "\nCTC cmol: " + CTCcmol
-                        + "\nV% atual: " + vAtual + "\nM.O%: " + moPercentual
-                        + "%\nCarbono: " + carbono + "\n");
-                break;
-            default:
-                System.out.println("Tipo de solo Incorreto para os cálculos!");
-                break;
         }
     }
 }
