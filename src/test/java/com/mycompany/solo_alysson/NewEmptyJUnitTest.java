@@ -109,4 +109,46 @@ public class NewEmptyJUnitTest {
                 new Potassio().verificaTeorOxidoPotassio(22)
         );
     }
+
+    @Test
+    public void testaCalculaTeorAtingir() {
+        assertEquals(3.41,
+                new Fosforo().calculaTeorAtingir(8.59, 12.0)
+        );
+    }
+
+    @Test
+    public void testaConverteFosforoMgEmKg() {
+        assertEquals(6.82,
+                new Fosforo().converteMgEmKg(3.41)
+        );
+    }
+
+    @Test
+    public void testaPotassioEmPentoxidoDifosforo() {
+        assertEquals(15.6178,
+                new Fosforo().potassioEmPentoxidoDifosforo(6.82)
+        );
+    }
+
+    @Test
+    public void testaCalculaPentoxidoDiFosforoNecessario() {
+        assertEquals(22.31114285714286,
+                new Fosforo().calculaPentoxidoDiFosforoNecessario(15.6178, 70.0)
+        );
+    }
+
+    @Test
+    public void testaCalculaQtdFosforoAplicar() {
+        assertEquals(123.95079365079366,
+                new Fosforo().calculaQtdFosforoAplicar(22.31114285714286)
+        );
+    }
+
+    @Test
+    public void testaCusto() {
+        assertEquals(156.178,
+                new Fosforo().calculaCusto(1260.0, 123.95079365079366)
+        );
+    }
 }

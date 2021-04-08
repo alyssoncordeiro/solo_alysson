@@ -1,11 +1,15 @@
 package com.mycompany.solo_alysson;
 
-public class Fosforo extends Solo {
+public class Fosforo {
 
     String fonte;
-    double custo, qtdAplicar, teor, eficiencia, necessidadeAdicionar, pentoxidoDifosforo, pentoxidoDifosforoNecessario, precoFonteFosforo;
+    double custo, qtdAplicar, teor, teorAtingir, eficiencia, mgEmKg, pentoxidoDifosforo, pentoxidoDifosforoNecessario, precoFonteFosforo;
 
     public Fosforo() {
+    }
+
+    public double getTeorAtingir() {
+        return teorAtingir;
     }
 
     public String getFonte() {
@@ -28,8 +32,8 @@ public class Fosforo extends Solo {
         return eficiencia;
     }
 
-    public double getNecessidadeAdicionar() {
-        return necessidadeAdicionar;
+    public double getMgEmKg() {
+        return mgEmKg;
     }
 
     public double getPentoxidoDifosforo() {
@@ -44,24 +48,27 @@ public class Fosforo extends Solo {
         return precoFonteFosforo;
     }
 
-    @Override
-    public void calculos() {
-        teor -= super.fosforo;
-        necessidadeAdicionar = teor * 2;
-        pentoxidoDifosforo = necessidadeAdicionar * 2.29;
-        pentoxidoDifosforoNecessario = pentoxidoDifosforo * 100 / eficiencia;
-        qtdAplicar = pentoxidoDifosforoNecessario * 100 / 18;
-        custo = precoFonteFosforo * qtdAplicar / 1000;
+    public double calculaTeorAtingir(double fosforo, double teor) {
+        return teorAtingir = teor - fosforo;
     }
 
-    public void recuperacao() {
-        switch (fonte) {
-            case "Superfosfato simples":
-                System.out.println("Quantidade de Superfosfato simples a aplicar: " + qtdAplicar + " kg/hectare\nCusto/hectare: R$" + custo);
-                break;
-            default:
-                System.out.println("Fonte de Fosforo incorreta");
-                break;
-        }
+    public double converteMgEmKg(double teorAtingir) {
+        return mgEmKg = teorAtingir * 2;
+    }
+
+    public double potassioEmPentoxidoDifosforo(double mgEmKg) {
+        return pentoxidoDifosforo = mgEmKg * 2.29;
+    }
+
+    public double calculaPentoxidoDiFosforoNecessario(double pentoxidoDifosforo, double eficiencia) {
+        return pentoxidoDifosforoNecessario = pentoxidoDifosforo * 100 / eficiencia;
+    }
+
+    public double calculaQtdFosforoAplicar(double pentoxidoDifosforoNecessario) {
+        return qtdAplicar = pentoxidoDifosforoNecessario * 100 / 18;
+    }
+
+    public double calculaCusto(double precoFonteFosforo, double qtdAplicar) {
+        return custo = precoFonteFosforo * qtdAplicar / 1000;
     }
 }
