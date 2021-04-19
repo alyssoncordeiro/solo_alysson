@@ -1,6 +1,6 @@
 package com.mycompany.solo_alysson;
 
-public enum TeordoPentoxidoDifosforo {
+public enum FonteFosforo {
 
     SUPERFOSFATO_SIMPLES {
         @Override
