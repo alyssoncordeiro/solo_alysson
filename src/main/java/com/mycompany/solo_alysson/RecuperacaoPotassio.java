@@ -2,11 +2,17 @@ package com.mycompany.solo_alysson;
 
 public class RecuperacaoPotassio {
 
-    String fonte;
-    double potassioDesejado, potassioExistente, custo, qtdAplicar, potassioAdicionar, cmolcEmMg, mgEmKg, oxidoPotassio, eficiencia, eficiencia2, precoFontePotassio;
-    int teorOxidoPotassio;
+    double fonte, potassioDesejado, potassioExistente, custo, qtdAplicar, potassioAdicionar, cmolcEmMg, mgEmKg, oxidoPotassio, eficiencia, eficiencia2, precoFontePotassio;
 
     public RecuperacaoPotassio() {
+    }
+
+    RecuperacaoPotassio(double fonte) {
+        this.fonte = fonte;
+    }
+
+    public double getFonte() {
+        return fonte;
     }
 
     public double calculaPotassioExistente(double potassio, double CTCcmol) {
@@ -33,24 +39,11 @@ public class RecuperacaoPotassio {
         return eficiencia2 = oxidoPotassio * 100 / eficiencia;
     }
 
-    public double calculaQtdAplicarFontePotassio(double eficiencia2, int teorOxidoPotassio) {
-        return qtdAplicar = eficiencia2 * 100 / teorOxidoPotassio;
+    public double calculaQtdAplicarFontePotassio(double eficiencia2, double fonte) {
+        return qtdAplicar = eficiencia2 * 100 / fonte;
     }
 
     public double calculaCustoAplicacao(double precoFontePotassio, double qtdAplicar) {
         return custo = precoFontePotassio * qtdAplicar / 1000;
-    }
-
-    public String verificaTeorOxidoPotassio(int teorOxidoPotassio) {
-        switch (teorOxidoPotassio) {
-            case 58:
-                return "Cloreto de Potassio";
-            case 52:
-                return "Sulfato de Potassio";
-            case 22:
-                return "Sulfato de Potassio / Magnesio";
-            default:
-                return "Fonte de Potassio Invalida";
-        }
     }
 }
