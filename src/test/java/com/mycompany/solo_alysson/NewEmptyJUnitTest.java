@@ -190,79 +190,62 @@ public class NewEmptyJUnitTest {
 
     @Test
     public void testaFonteFosforo() {
-        assertEquals(new RecuperacaoFosforo(18.0, 0.1, 0.0, 0.0, 0.28).getFonte(),
+        assertEquals(new RecuperacaoFosforo(18.0, 0.0).getFonte(),
                 FonteFosforo.SUPERFOSFATO_SIMPLES.verificaFonteFosforo().getFonte());
-        assertEquals(new RecuperacaoFosforo(41.0, 0.0, 0.0, 0.0, 0.2).getFonte(),
+        assertEquals(new RecuperacaoFosforo(41.0, 0.0).getFonte(),
                 FonteFosforo.SUPERFOSFATO_TRIPLO.verificaFonteFosforo().getFonte());
-        assertEquals(new RecuperacaoFosforo(48.0, 0.0, 0.09, 0.0, 0.0).getFonte(),
+        assertEquals(new RecuperacaoFosforo(48.0, 0.0).getFonte(),
                 FonteFosforo.MAP.verificaFonteFosforo().getFonte());
-        assertEquals(new RecuperacaoFosforo(45.0, 0.0, 0.16, 0.0, 0.0).getFonte(),
+        assertEquals(new RecuperacaoFosforo(45.0, 0.0).getFonte(),
                 FonteFosforo.DAP.verificaFonteFosforo().getFonte());
-        assertEquals(new RecuperacaoFosforo(18.0, 0.0, 0.0, 0.15, 0.28).getFonte(),
+        assertEquals(new RecuperacaoFosforo(18.0, 0.0).getFonte(),
                 FonteFosforo.YOORIN.verificaFonteFosforo().getFonte());
-        assertEquals(new RecuperacaoFosforo(33.0, 0.0, 0.0, 0.0, 0.52).getFonte(),
+        assertEquals(new RecuperacaoFosforo(33.0, 0.0).getFonte(),
                 FonteFosforo.FOSFATO_NATURAL_DE_ARAD.verificaFonteFosforo().getFonte());
-        assertEquals(new RecuperacaoFosforo(29.0, 0.0, 0.0, 0.0, 0.52).getFonte(),
+        assertEquals(new RecuperacaoFosforo(29.0, 0.0).getFonte(),
                 FonteFosforo.FOSFATO_GAFSA.verificaFonteFosforo().getFonte());
-        assertEquals(new RecuperacaoFosforo(32.0, 0.0, 0.0, 0.0, 0.45).getFonte(),
+        assertEquals(new RecuperacaoFosforo(32.0, 0.0).getFonte(),
                 FonteFosforo.FOSFATO_DAOUI.verificaFonteFosforo().getFonte());
-        assertEquals(new RecuperacaoFosforo(24.0, 0.0, 0.0, 0.0, 0.28).getFonte(),
+        assertEquals(new RecuperacaoFosforo(24.0, 0.0).getFonte(),
                 FonteFosforo.FOSFATO_PATOS_DE_MINAS.verificaFonteFosforo().getFonte());
-        assertEquals(new RecuperacaoFosforo(18.5, 0.0, 0.0, 0.0, 0.44).getFonte(),
+        assertEquals(new RecuperacaoFosforo(18.5, 0.0).getFonte(),
                 FonteFosforo.ESCORIA_DE_THOMAS.verificaFonteFosforo().getFonte());
-        assertEquals(new RecuperacaoFosforo(52.0, 0.0, 0.0, 0.0, 0.0).getFonte(),
+        assertEquals(new RecuperacaoFosforo(52.0, 0.0).getFonte(),
                 FonteFosforo.ACIDO_FOSFORICO.verificaFonteFosforo().getFonte());
-        assertEquals(new RecuperacaoFosforo(18.0, 0.11, 0.0, 0.0, 0.18).getFonte(),
+        assertEquals(new RecuperacaoFosforo(18.0, 0.0).getFonte(),
                 FonteFosforo.MULTIFOSFATO_MAGNESIANO.verificaFonteFosforo().getFonte());
     }
 
-    public void testaValorEnxofre() {
-        assertEquals(new RecuperacaoFosforo(18.0, 0.1, 0.0, 0.0, 0.28).getEnxofre(),
-                FonteFosforo.SUPERFOSFATO_SIMPLES.verificaFonteFosforo().getEnxofre());
-        assertEquals(new RecuperacaoFosforo(18.0, 0.11, 0.0, 0.0, 0.18).getEnxofre(),
-                FonteFosforo.MULTIFOSFATO_MAGNESIANO.verificaFonteFosforo().getEnxofre());
+    @Test
+    public void testaValorNutriente() {
+        assertEquals(new RecuperacaoFosforo(0.0, 0.1).getNutriente(),
+                FonteFosforo.SUPERFOSFATO_SIMPLES.verificaFonteFosforo().getNutriente());
+        assertEquals(new RecuperacaoFosforo(0.0, 0.2).getNutriente(),
+                FonteFosforo.SUPERFOSFATO_TRIPLO.verificaFonteFosforo().getNutriente());
+        assertEquals(new RecuperacaoFosforo(0.0, 0.09).getNutriente(),
+                FonteFosforo.MAP.verificaFonteFosforo().getNutriente());
+        assertEquals(new RecuperacaoFosforo(0.0, 0.16).getNutriente(),
+                FonteFosforo.DAP.verificaFonteFosforo().getNutriente());
+        assertEquals(new RecuperacaoFosforo(0.0, 0.15).getNutriente(),
+                FonteFosforo.YOORIN.verificaFonteFosforo().getNutriente());
+        assertEquals(new RecuperacaoFosforo(0.0, 0.52).getNutriente(),
+                FonteFosforo.FOSFATO_NATURAL_DE_ARAD.verificaFonteFosforo().getNutriente());
+        assertEquals(new RecuperacaoFosforo(0.00, 0.52).getNutriente(),
+                FonteFosforo.FOSFATO_GAFSA.verificaFonteFosforo().getNutriente());
+        assertEquals(new RecuperacaoFosforo(0.0, 0.45).getNutriente(),
+                FonteFosforo.FOSFATO_DAOUI.verificaFonteFosforo().getNutriente());
+        assertEquals(new RecuperacaoFosforo(0.0, 0.28).getNutriente(),
+                FonteFosforo.FOSFATO_PATOS_DE_MINAS.verificaFonteFosforo().getNutriente());
+        assertEquals(new RecuperacaoFosforo(0.0, 0.44).getNutriente(),
+                FonteFosforo.ESCORIA_DE_THOMAS.verificaFonteFosforo().getNutriente());
+        assertEquals(new RecuperacaoFosforo(0.00, 0.11).getNutriente(),
+                FonteFosforo.MULTIFOSFATO_MAGNESIANO.verificaFonteFosforo().getNutriente());
     }
-
-    public void testaValorNitrogenio() {
-        assertEquals(new RecuperacaoFosforo(48.0, 0.0, 0.09, 0.0, 0.0).getNitrogenio(),
-                FonteFosforo.MAP.verificaFonteFosforo().getNitrogenio());
-        assertEquals(new RecuperacaoFosforo(45.0, 0.0, 0.16, 0.0, 0.0).getNitrogenio(),
-                FonteFosforo.DAP.verificaFonteFosforo().getNitrogenio());
-    }
-
-    public void testaValorMagnesio() {
-        assertEquals(new RecuperacaoFosforo(18.0, 0.0, 0.0, 0.15, 0.28).getMagnesio(),
-                FonteFosforo.YOORIN.verificaFonteFosforo().getMagnesio());
-    }
-
-    public void testaValorCalcio() {
-        assertEquals(new RecuperacaoFosforo(18.0, 0.1, 0.0, 0.0, 0.28).getCalcio(),
-                FonteFosforo.SUPERFOSFATO_SIMPLES.verificaFonteFosforo().getCalcio());
-        assertEquals(new RecuperacaoFosforo(41.0, 0.0, 0.0, 0.0, 0.2).getCalcio(),
-                FonteFosforo.SUPERFOSFATO_TRIPLO.verificaFonteFosforo().getCalcio());
-        assertEquals(new RecuperacaoFosforo(18.0, 0.0, 0.0, 0.15, 0.28).getCalcio(),
-                FonteFosforo.YOORIN.verificaFonteFosforo().getCalcio());
-        assertEquals(new RecuperacaoFosforo(33.0, 0.0, 0.0, 0.0, 0.52).getCalcio(),
-                FonteFosforo.FOSFATO_NATURAL_DE_ARAD.verificaFonteFosforo().getCalcio());
-        assertEquals(new RecuperacaoFosforo(29.0, 0.0, 0.0, 0.0, 0.52).getCalcio(),
-                FonteFosforo.FOSFATO_GAFSA.verificaFonteFosforo().getCalcio());
-        assertEquals(new RecuperacaoFosforo(32.0, 0.0, 0.0, 0.0, 0.45).getCalcio(),
-                FonteFosforo.FOSFATO_DAOUI.verificaFonteFosforo().getCalcio());
-        assertEquals(new RecuperacaoFosforo(24.0, 0.0, 0.0, 0.0, 0.28).getCalcio(),
-                FonteFosforo.FOSFATO_PATOS_DE_MINAS.verificaFonteFosforo().getCalcio());
-        assertEquals(new RecuperacaoFosforo(18.5, 0.0, 0.0, 0.0, 0.44).getCalcio(),
-                FonteFosforo.ESCORIA_DE_THOMAS.verificaFonteFosforo().getCalcio());
-        assertEquals(new RecuperacaoFosforo(18.0, 0.11, 0.0, 0.0, 0.18).getCalcio(),
-                FonteFosforo.MULTIFOSFATO_MAGNESIANO.verificaFonteFosforo().getCalcio());
-    }
-
-    public void testaForceneEnxofre() {
+    
+    @Test
+    public void testaForneceNutriente(){
         assertEquals(12.395079365079367,
-                new RecuperacaoFosforo().forneceEnxofre(123.95079365079366, FonteFosforo.SUPERFOSFATO_SIMPLES.verificaFonteFosforo().getEnxofre()));
-    }
-
-    public void testaForneceCalcio() {
-        assertEquals(34.70622222222223,
-                new RecuperacaoFosforo().forneceEnxofre(123.95079365079366, FonteFosforo.SUPERFOSFATO_SIMPLES.verificaFonteFosforo().getCalcio()));
+                new RecuperacaoFosforo().forneceNutriente(123.95079365079366, 
+                        FonteFosforo.SUPERFOSFATO_SIMPLES.verificaFonteFosforo().getNutriente()));
     }
 }
